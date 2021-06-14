@@ -9,6 +9,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.sun.istack.NotNull;
+
 @Entity
 @Table(name = "TB_PRODUTO")
 public class Produto implements Serializable {
@@ -18,9 +20,14 @@ public class Produto implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-
+	
+	@NotNull
 	private String nome;
+	
+	@NotNull
 	private BigDecimal quantidade;
+	
+	@NotNull
 	private BigDecimal valor;
 
 	public Long getId() {
