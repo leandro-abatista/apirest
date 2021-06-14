@@ -11,4 +11,7 @@ import com.produtos.apirest.models.Produto;
  */
 public interface ProdutoRepository extends JpaRepository<Produto, Long> {
 
+	
+	//método para buscar apenas um id
+	//Produto findByPorId(Long id);
 }
